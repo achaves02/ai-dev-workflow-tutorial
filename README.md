@@ -16,7 +16,7 @@ A hands-on tutorial for establishing a complete, end-to-end, AI-assisted softwar
 
 ### The Industry Has Changed
 
-Software development in 2025 looks fundamentally different than it did just two years ago. AI coding assistants have moved from novelty to necessity. Companies expect new hires to work effectively with AI tools, and those who can are dramatically more productive.
+Software development in 2026 looks fundamentally different than it did just two years ago. AI coding assistants have moved from novelty to necessity. Companies expect new hires to work effectively with AI tools, and those who can are dramatically more productive.
 
 **This is not about replacing developers — it's about amplifying them.**
 

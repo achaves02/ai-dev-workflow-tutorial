@@ -2,7 +2,7 @@
 
 ## Why You Are Here
 
-### The Most In-Demand Skill Set of 2025
+### The Most In-Demand Skill Set of 2026
 
 The software industry is undergoing its biggest transformation since the introduction of the internet. AI-assisted development has moved from experimental to essential. Companies are actively seeking developers who can work effectively with AI tools — and struggling to find them.
 
