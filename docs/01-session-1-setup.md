@@ -168,12 +168,6 @@ Many of the following steps require running commands in the terminal. Here's how
 
 **Tip:** You can resize the terminal by dragging the divider between the terminal and the editor area.
 
-**Terminal panel icons:** You will see several icons in the top-right corner of the terminal panel. The most useful ones are:
-- **+** (plus) — Creates a new terminal if your current one gets stuck or unresponsive
-- **x** (on the terminal tab) — Closes a terminal
-
-You can ignore the other icons for this tutorial.
-
 ---
 
 ### 2.2 Install Git
