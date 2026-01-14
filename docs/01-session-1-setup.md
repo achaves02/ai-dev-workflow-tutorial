@@ -180,6 +180,10 @@ When you see the "Customize Your Experience" screen:
 
 If asked to "Claim a free Pro trial", you can click **Skip for now**.
 
+When you see the "Review Settings" screen:
+- Click **Connect** next to GitHub to link your GitHub account
+- Click **Continue**
+
 If you already have a Cursor account, sign in instead.
 
 **Checkpoint:** You should be able to open Cursor and see the welcome screen or an empty editor.
