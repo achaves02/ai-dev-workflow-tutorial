@@ -433,7 +433,7 @@ Now use Claude Code to build the dashboard.
    ```
    /speckit.implement
 
-   Build the Streamlit sales dashboard based on our specification.
+   Implement ECOM-1: Build the Streamlit sales dashboard based on our specification.
 
    Requirements:
    - Load data from data/sales-data.csv
