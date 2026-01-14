@@ -20,8 +20,7 @@ This session covers the complete development workflow: from connecting Claude Co
   - [5.2 Build the Dashboard](#52-build-the-dashboard)
   - [5.3 Iterate and Improve](#53-iterate-and-improve)
 - [6. Commit Your Changes](#6-commit-your-changes)
-  - [6.1 Stage Your Changes](#61-stage-your-changes)
-  - [6.2 Create the Commit](#62-create-the-commit)
+  - [6.1 Ask Claude Code to Commit](#61-ask-claude-code-to-commit)
 - [7. Push and Create Pull Request](#7-push-and-create-pull-request)
   - [7.1 Push Your Branch](#71-push-your-branch)
   - [7.2 Create Pull Request](#72-create-pull-request)
@@ -515,76 +514,40 @@ Claude Code can read your existing code and make modifications.
 
 ## 6. Commit Your Changes
 
-Now save your work with a Git commit.
+Now save your work with a Git commit. Claude Code can handle all the git operations for you.
 
-### 6.1 Stage Your Changes
+### 6.1 Ask Claude Code to Commit
 
 **Steps:**
 
-1. See what files have changed:
-   ```bash
-   git status
+1. In Claude Code, ask it to commit your changes:
    ```
-   You should see new files (app.py, requirements.txt, venv/) and modified files.
-
-2. Check the `.gitignore` file — make sure `venv/` is listed (you don't want to commit the virtual environment).
-
-   **What is .gitignore?** This file tells Git which files and folders to ignore and NOT track. The `venv/` folder contains installed packages that can be recreated from `requirements.txt`, so we don't need to store it in Git.
-
-   If `venv/` is not in `.gitignore`, add it:
-   ```bash
-   echo "venv/" >> .gitignore
+   Commit my changes for the sales dashboard.
+   Make sure venv/ is in .gitignore.
+   Use the Jira issue key ECOM-1 in the commit message.
    ```
 
-3. Stage the files you want to commit:
-   ```bash
-   git add app.py requirements.txt .gitignore
-   ```
+2. Claude will:
+   - Check the `.gitignore` file and add `venv/` if needed
+   - Stage the appropriate files (app.py, requirements.txt, etc.)
+   - Create a commit with a properly formatted message
 
-   Or stage all changes (except ignored files):
-   ```bash
-   git add .
-   ```
-
-4. Verify what will be committed:
-   ```bash
-   git status
-   ```
-   Files should appear under "Changes to be committed" in green.
-
-**Checkpoint:** Running `git status` shows your files staged for commit.
-
----
-
-### 6.2 Create the Commit
+**What is .gitignore?** This file tells Git which files and folders to ignore and NOT track. The `venv/` folder contains installed packages that can be recreated from `requirements.txt`, so we don't need to store it in Git.
 
 **Commit Message Format:**
 
-Always format commit messages as: `ISSUE-KEY: description`
+Claude Code will format the commit message as: `ECOM-1: description`
 
 | Part | Example | Rule |
 |------|---------|------|
 | Issue key | `ECOM-1:` | Uppercase, followed by colon and space |
 | Description | `add sales dashboard` | Lowercase, present tense verb (add, fix, update) |
 
-**Steps:**
+This format ensures:
+- `ECOM-1:` — Links this commit to the Jira issue (for traceability)
+- `add sales dashboard` — Describes what was added (present tense, lowercase)
 
-1. Create a commit with a message that includes the Jira key:
-   ```bash
-   git commit -m "ECOM-1: add sales dashboard with KPIs and charts"
-   ```
-
-   This format ensures:
-   - `ECOM-1:` — Links this commit to the Jira issue (for traceability)
-   - `add sales dashboard` — Describes what was added (present tense, lowercase)
-
-2. Verify the commit:
-   ```bash
-   git log --oneline -1
-   ```
-   You should see your commit with the message.
-
-**Checkpoint:** `git log` shows your commit with the Jira key in the message.
+**Checkpoint:** Claude confirms the commit was created with the Jira key in the message.
 
 ---
 
