@@ -61,7 +61,7 @@ Branches let you work on features without affecting the main codebase. This mean
 
 ### What if I forget to create a branch before making changes?
 
-If you haven't committed yet:
+If you haven't committed yet, run in the terminal:
 ```bash
 # Create branch and switch to it — your changes come with you
 git checkout -b feature/ECOM-1-my-feature
@@ -190,9 +190,9 @@ This reduces wasted effort from building the wrong thing.
 ### What if spec-kit commands don't work?
 
 Try:
-1. Ensure spec-kit is initialized: `specify init . --ai claude`
+1. Ensure spec-kit is initialized (run in terminal): `specify init . --ai claude`
 2. Use natural language instead: "Use spec-kit to create a specification for..."
-3. Check that spec-kit is installed: `specify --help`
+3. Check that spec-kit is installed (run in terminal): `specify --help`
 
 ### Can I skip spec-kit for small tasks?
 
@@ -240,6 +240,7 @@ It's a great fit for ISBA students building data-focused applications.
 
 ### How do I run the dashboard?
 
+In the terminal:
 ```bash
 streamlit run app.py
 ```
@@ -260,7 +261,7 @@ Yes. Common alternatives:
 
 ### What Python version do I need?
 
-Python 3.11 or higher. Check with:
+Python 3.11 or higher. Check in the terminal:
 ```bash
 python --version  # or python3 --version
 ```

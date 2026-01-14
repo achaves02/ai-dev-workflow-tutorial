@@ -43,7 +43,7 @@ Use this checklist when setting up your actual capstone project. Each team membe
   - .gitignore for your tech stack
   - LICENSE if applicable
 
-- [ ] **Clone the repository** to your local machine
+- [ ] **Clone the repository** to your local machine. In the terminal:
   ```bash
   git clone https://github.com/team/capstone-project.git
   cd capstone-project
@@ -80,7 +80,7 @@ Use this checklist when setting up your actual capstone project. Each team membe
 
 ### Spec-Kit Initialization
 
-- [ ] **Initialize spec-kit** in your capstone repo
+- [ ] **Initialize spec-kit** in your capstone repo. In the terminal:
   ```bash
   specify init . --ai claude
   ```
@@ -192,6 +192,7 @@ Claude Code is most helpful when you:
 
 ### Starting a New Feature
 
+In the terminal:
 ```bash
 # 1. Make sure main is up to date
 git checkout main
@@ -216,7 +217,7 @@ git push -u origin feature/PROJ-123-add-user-dashboard
 
 ### Handling Merge Conflicts
 
-When you see "This branch has conflicts":
+When you see "This branch has conflicts", run these in the terminal:
 
 ```bash
 # 1. Get latest main
