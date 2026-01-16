@@ -518,7 +518,15 @@ After completing the first issue, save your work and update Jira to show evidenc
    - Check the status shows "Done"
    - Look for the comment with what was implemented and the git info (commit hash, branch, GitHub link)
 
-**Checkpoint:** ECOM-1 shows status "Done" with a comment containing git info.
+5. Verify tasks were marked complete:
+   - Open your tasks file (e.g., `specs/001-sales-dashboard/tasks.md`)
+   - Completed tasks show `[x]` instead of `[ ]`:
+     ```
+     - [x] T001 Create requirements.txt with dependencies
+     - [x] T002 Create app.py with basic configuration
+     ```
+
+**Checkpoint:** ECOM-1 shows status "Done" with a comment, and tasks are marked `[x]` in tasks.md.
 
 ---
 
