@@ -174,7 +174,7 @@ To verify, either:
 - **In the file explorer:** Expand the `.specify/` and `.claude/commands/` folders in Cursor's left sidebar
 - **In the terminal:** Run `ls -la .specify/` and `ls -la .claude/commands/`
 
-You should see files like `speckit.constitution.md`, `speckit.specify.md`, etc. in the `.claude/commands/` directory.
+You should see files like `speckit.constitution.md`, `speckit.specify.md`, etc. in the `.claude/commands/` directory. These `.md` files are detailed prompts that tell Claude Code exactly how to execute each slash command.
 
 **Important:** The slash commands (`/speckit.constitution`, `/speckit.specify`, etc.) will NOT work until this initialization step completes successfully. If you don't see these directories, re-run the `specify init` command.
 
