@@ -477,19 +477,26 @@ Now use Claude Code to build the dashboard. This step will create multiple files
 
 **Steps:**
 
-1. In Claude Code:
+1. First, update the Jira issue status to show you're starting work:
+   ```
+   Move ECOM-1 to In Progress in Jira
+   ```
+
+   Claude will use the Atlassian MCP to update the issue status.
+
+2. Now implement the first task:
    ```
    /speckit.implement
    ```
 
-2. Claude will automatically use your tasks file to:
+3. Claude will automatically use your tasks file to:
    - Analyze the CSV data structure
    - Create the dashboard code
    - Explain what each part does
 
-3. Review the generated code. Make sure you understand what it does.
+4. Review the generated code. Make sure you understand what it does.
 
-4. If Claude asks where to put the file, a common choice is:
+5. If Claude asks where to put the file, a common choice is:
    - `app.py` in the project root, or
    - `src/dashboard.py` in a source folder
 
@@ -610,6 +617,32 @@ This format ensures:
 
 ---
 
+### 5.2 Update Jira with Git Info
+
+Now update the Jira issue with your commit information and mark it complete.
+
+**Steps:**
+
+1. In Claude Code:
+   ```
+   Update ECOM-1 in Jira:
+   - Add a comment with the commit hash and branch name
+   - Move the issue to Done
+   ```
+
+2. Claude will:
+   - Add a comment to the issue with your git commit details
+   - Update the issue status to Done
+
+3. Verify in Jira:
+   - Open ECOM-1 in your browser
+   - Check the status shows "Done"
+   - Look for the comment with git info
+
+**Checkpoint:** ECOM-1 shows status "Done" with a comment containing git info.
+
+---
+
 ## 6. Push to GitHub
 
 Now push your code to GitHub so it's saved in the cloud and ready for deployment.
@@ -691,7 +724,7 @@ Verify everything is complete:
 
 ### Jira
 - [ ] Multiple issues created from spec-kit tasks (ECOM-1, ECOM-2, etc.)
-- [ ] ECOM-1 shows linked GitHub commit
+- [ ] ECOM-1 status is "Done" with git info comment
 
 ### Dashboard
 - [ ] Streamlit app runs locally
