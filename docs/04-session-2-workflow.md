@@ -457,28 +457,77 @@ Typically this involves:
 
 ---
 
-### 4.2 Iterate and Improve
+### 4.2 Commit, Push, and Update Jira
 
-If something doesn't look right, ask Claude to help:
+After completing the first issue, save your work and update Jira to show evidence of completion.
 
-```
-The category bar chart is showing categories in the wrong order.
-Can you sort them by sales value descending?
-```
+**Steps:**
 
-Or:
+1. Ask Claude to commit your changes with the Jira issue key:
+   ```
+   Commit my changes for ECOM-1.
+   Make sure venv/ is in .gitignore.
+   ```
 
-```
-Can you add a title to the dashboard and format the Total Sales KPI as currency?
-```
+   *Replace `ECOM-1` with your actual issue key.*
 
-Claude Code can read your existing code and make modifications.
+   > **What is .gitignore?** This file tells Git which files to ignore. The `venv/` folder contains installed packages that can be recreated from `requirements.txt`, so we don't store it in Git.
 
-**Checkpoint:** The dashboard looks professional and displays data correctly.
+2. Push to GitHub:
+   ```
+   Push my changes to GitHub.
+   ```
+
+3. Update Jira with evidence of completion:
+   ```
+   Update ECOM-1 in Jira:
+   - Add a comment with the commit hash and GitHub link
+   - Move the issue to Done
+   ```
+
+4. Verify in Jira:
+   - Open ECOM-1 in your browser
+   - Check the status shows "Done"
+   - Look for the comment with git info
+
+**Checkpoint:** ECOM-1 shows status "Done" with a comment containing git info.
 
 ---
 
-### 4.3 Merge Your Work to Main
+### 4.3 Continue with Remaining Issues
+
+Now repeat the cycle for each remaining Jira issue:
+
+1. **Ask Claude which issue to work on next:**
+   ```
+   Which Jira issue should we implement next?
+   ```
+
+2. **Implement the issue:**
+   ```
+   /speckit.implement
+
+   Implement ECOM-2 and move it to In Progress in Jira.
+   ```
+
+3. **Test your changes** — follow Claude's instructions to verify the implementation works.
+
+4. **Commit, push, and update Jira** (same as section 4.2):
+   ```
+   Commit my changes for ECOM-2, push to GitHub, and update the Jira issue with git info and mark it Done.
+   ```
+
+Repeat this cycle until all issues are complete. You can also ask Claude to fix or improve things:
+
+```
+The chart colors don't match our brand. Can you update them?
+```
+
+**Checkpoint:** All Jira issues are marked "Done" with git info comments. The dashboard displays all features correctly.
+
+---
+
+### 4.4 Merge Your Work to Main
 
 Spec-kit created a feature branch for your work. Now that implementation is complete, merge your changes back to the main branch.
 
@@ -507,112 +556,7 @@ Spec-kit created a feature branch for your work. Now that implementation is comp
 
 ---
 
-## 5. Commit Your Changes
-
-Now save your work with a Git commit. Claude Code can handle all the git operations for you.
-
-### 5.1 Ask Claude Code to Commit
-
-**Steps:**
-
-1. In Claude Code (run `claude` if not already in a session), ask it to commit your changes:
-   ```
-   Commit my changes for the sales dashboard.
-   Make sure venv/ is in .gitignore.
-   Use the Jira issue key ECOM-1 in the commit message.
-   ```
-
-2. Claude will:
-   - Check the `.gitignore` file and add `venv/` if needed
-   - Stage the appropriate files (app.py, requirements.txt, etc.)
-   - Create a commit with a properly formatted message
-
-**What is .gitignore?** This file tells Git which files and folders to ignore and NOT track. The `venv/` folder contains installed packages that can be recreated from `requirements.txt`, so we don't need to store it in Git.
-
-**Commit Message Format:**
-
-Claude Code will format the commit message as: `ECOM-1: description`
-
-| Part | Example | Rule |
-|------|---------|------|
-| Issue key | `ECOM-1:` | Uppercase, followed by colon and space |
-| Description | `add sales dashboard` | Lowercase, present tense verb (add, fix, update) |
-
-This format ensures:
-- `ECOM-1:` — Links this commit to the Jira issue (for traceability)
-- `add sales dashboard` — Describes what was added (present tense, lowercase)
-
-**Checkpoint:** Claude confirms the commit was created with the Jira key in the message.
-
----
-
-### 5.2 Update Jira with Git Info
-
-Now update the Jira issue with your commit information and mark it complete.
-
-**Steps:**
-
-1. In Claude Code:
-   ```
-   Update ECOM-1 in Jira:
-   - Add a comment with the commit hash and branch name
-   - Move the issue to Done
-   ```
-
-2. Claude will:
-   - Add a comment to the issue with your git commit details
-   - Update the issue status to Done
-
-3. Verify in Jira:
-   - Open ECOM-1 in your browser
-   - Check the status shows "Done"
-   - Look for the comment with git info
-
-**Checkpoint:** ECOM-1 shows status "Done" with a comment containing git info.
-
----
-
-## 6. Push to GitHub
-
-Now push your code to GitHub so it's saved in the cloud and ready for deployment.
-
-### 6.1 Ask Claude Code to Push
-
-**Steps:**
-
-1. In Claude Code (run `claude` if not already in a session), ask it to push your changes:
-   ```
-   Push my changes to GitHub.
-   ```
-
-2. Claude will push your commit to GitHub.
-
-3. You may be prompted for GitHub credentials. If using HTTPS, enter your username and a personal access token (not your password).
-
-**Checkpoint:** Claude confirms the push was successful.
-
----
-
-### 6.2 Verify on GitHub
-
-**Steps:**
-
-1. Go to your repository on GitHub (`github.com/[your-username]/ai-dev-workflow-tutorial`)
-2. You should see your recent commit with the message containing `ECOM-1`
-3. Click on the commit to see the files you added
-
-**Verify Jira Integration:**
-
-1. Go to your Jira workspace
-2. Open issue ECOM-1
-3. Look for a "Development" panel or section
-4. You should see your commit linked
-
-**Checkpoint:** Your code is visible on GitHub and linked in Jira.
-
----
-
-## 7. Deploy to Streamlit Community Cloud
+## 5. Deploy to Streamlit Community Cloud
 
 Now make your dashboard publicly accessible by deploying it to Streamlit Community Cloud.
 
@@ -653,7 +597,7 @@ Verify everything is complete:
 
 ### Jira
 - [ ] Multiple issues created from spec-kit tasks (ECOM-1, ECOM-2, etc.)
-- [ ] ECOM-1 status is "Done" with git info comment
+- [ ] All issues marked "Done" with git info comments
 
 ### Dashboard
 - [ ] Streamlit app runs locally
