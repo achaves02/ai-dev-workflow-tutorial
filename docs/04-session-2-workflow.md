@@ -201,6 +201,7 @@ The constitution establishes principles and guidelines for your project. It ensu
    - Simple, readable code
    - User-friendly interactive visualizations
    - Following Python best practices
+   - Use Python virtual environment for dependency isolation
    ```
 
 3. You'll see a permission prompt asking to use the skill. Select **Yes** to continue.
