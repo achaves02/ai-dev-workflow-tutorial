@@ -126,7 +126,11 @@ claude --version
    - Authorize Claude Code to access your Jira workspace
    - Return to the terminal
 
-9. Claude should now list your ECOM project.
+9. Claude should now list your ECOM project. You'll see something like:
+
+   | Key | Name | Type |
+   |-----|------|------|
+   | ECOM | E-Commerce Analytics | Software (Team-managed) |
 
 **Checkpoint:** Claude Code can see your Jira workspace and ECOM project.
 
