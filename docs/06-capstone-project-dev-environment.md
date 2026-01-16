@@ -59,8 +59,11 @@ Use this checklist when setting up your actual capstone project. Each team membe
 
 - [ ] **Create a shared Jira project**
   - One team member creates the project
-  - Invite others: Project Settings → Access → Add people
   - Choose a meaningful project key (e.g., `INV` for inventory system)
+  - Invite others ([Atlassian docs](https://support.atlassian.com/jira-software-cloud/docs/add-people-to-team-managed-projects/)):
+    1. Next to the name of your project in the sidebar, select **More actions** (•••), then **Project settings**
+    2. Select **Access**
+    3. Click **Add people**
 
 - [ ] **Set up your board**
   - Create columns: To Do, In Progress, In Review, Done
