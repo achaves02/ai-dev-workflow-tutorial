@@ -630,6 +630,8 @@ Spec-kit created a feature branch for your work. Now that implementation is comp
 
 Now make your dashboard publicly accessible by deploying it to Streamlit Community Cloud.
 
+> **Important:** Make sure you've completed section 4.4 (Merge Your Work to Main) before deploying. Streamlit Cloud deploys from the `main` branch, so your code needs to be there first.
+
 > **Note:** Spec-kit included deployment in your tasks based on the PRD requirements. We'll complete this step manually to learn the Streamlit Cloud interface.
 
 **Steps:**
