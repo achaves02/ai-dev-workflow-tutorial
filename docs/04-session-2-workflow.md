@@ -204,7 +204,20 @@ The constitution establishes principles and guidelines for your project. It ensu
    - Following Python best practices
    ```
 
-3. Claude will generate a constitution file. Review the output and confirm.
+3. You'll see a permission prompt asking to use the skill. Select **Yes** to continue.
+
+4. Claude will generate the constitution. When it wants to create or edit a file, you'll see:
+
+   ```
+   Do you want to make this edit to constitution.md?
+   > 1. Yes
+     2. Yes, allow all edits during this session (shift+tab)
+     3. No
+   ```
+
+   Select **Yes** to approve the edit. You can also select option 2 to allow all edits for the rest of this session without being asked each time.
+
+5. Review the generated constitution file.
 
 **Checkpoint:** A constitution file exists in your project (typically in `.specify/` or a `specs/` directory).
 
