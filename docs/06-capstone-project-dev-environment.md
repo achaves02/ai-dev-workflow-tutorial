@@ -282,38 +282,34 @@ When working as a team, the workflow expands slightly:
 │  4. Commit with Jira key                                    │
 │     "PROJ-123: add user login"                              │
 │                 ↓                                           │
-│  5. Push and create Pull Request                            │
+│  5. Push to GitHub                                          │
 │                 ↓                                           │
 │  6. Update Jira with evidence                               │
 │     (commit hash, branch, GitHub link)                      │
 │                 ↓                                           │
-│  7. Request review from teammate                            │
-│                 ↓                                           │
-│  8. Address feedback, push updates                          │
-│                 ↓                                           │
-│  9. Merge when approved                                     │
-│                 ↓                                           │
-│ 10. Move Jira issue to Done                                 │
+│  7. Merge to main and move Jira issue to Done               │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Code Review Guidelines
+### Avoiding Conflicts
 
-When reviewing a teammate's pull request:
+When multiple people work on the same codebase, coordination is key:
 
-1. **Check functionality** — Does the code do what the Jira issue describes?
-2. **Read the code** — Is it clear and understandable?
-3. **Look for issues** — Bugs, edge cases, security concerns
-4. **Be constructive** — Suggest improvements, don't just criticize
-5. **Approve or request changes** — Be timely; don't block teammates
+1. **Assign yourself to a Jira issue before starting** — This signals to teammates that you're working on it. Only one person should be assigned to an issue at a time.
 
-When your code is reviewed:
+2. **Check the Jira board before picking up work** — Make sure no one else is already working on the issue or a related feature.
 
-1. **Respond to all comments** — Even if just "Done" or "Addressed"
-2. **Don't take it personally** — Reviews improve code quality
-3. **Ask questions** — If feedback is unclear, ask for clarification
-4. **Push updates** — Address feedback in new commits
+3. **Work on separate files when possible** — Coordinate with your team so you're not editing the same files simultaneously.
+
+4. **Pull from main frequently** — Before starting new work and before merging, pull the latest changes:
+   ```
+   Pull the latest changes from main into my branch
+   ```
+
+5. **Push your work regularly** — Don't wait until everything is perfect. Frequent pushes help the team see what's changing.
+
+6. **Communicate** — Use your team chat to announce when you're starting and finishing work on an issue.
 
 ---
 
