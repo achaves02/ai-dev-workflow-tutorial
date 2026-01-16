@@ -57,17 +57,31 @@ Use this checklist when setting up your actual capstone project. Each team membe
 
 ### Jira Setup (For Teams)
 
-- [ ] **Create a shared Jira project**
-  - One team member creates the project
-  - Choose a meaningful project key (e.g., `INV` for inventory system)
-  - Invite others ([Atlassian docs](https://support.atlassian.com/jira-software-cloud/docs/add-people-to-team-managed-projects/)):
-    1. Next to the name of your project in the sidebar, select **More actions** (•••), then **Project settings**
-    2. Select **Access**
-    3. Click **Add people**
+One team member creates the Jira project, then invites the rest of the team.
 
-- [ ] **Set up your board**
-  - Create columns: To Do, In Progress, In Review, Done
-  - Decide on sprint length if using Scrum
+**Create the Jira project:**
+
+1. Use your existing Atlassian account (or create one at [atlassian.com](https://www.atlassian.com/))
+2. Access Jira by clicking the **menu icon** (four squares) in the top left, then click **Jira**
+3. In the left sidebar, click the **+** next to **Spaces** to create a new space
+4. For the space template, select **Software Development** on the left, then click **Use Template**
+5. When asked how your space is managed, select **Team-managed space**
+6. Name your project something descriptive and meaningful (e.g., `Inventory Management System`)
+7. Click **Show more** on the bottom left to set the **Project key** — this is important because you'll reference Jira issues by key and number (e.g., `INV-1`, `INV-2`)
+8. If prompted to connect to Confluence, skip this — we'll save documentation in GitHub
+9. If prompted to invite team members, you can add them now (see below) or do it later
+
+**After setup**, you'll see your board with three columns: **To Do**, **In Progress**, and **Done**.
+
+Click **Backlog** (tab to the left of "Board") — this is where Jira issues created via Claude Code will appear.
+
+**Invite team members** ([Atlassian docs](https://support.atlassian.com/jira-software-cloud/docs/add-people-to-team-managed-projects/)):
+
+1. Next to your project name in the sidebar, click **More actions** (•••), then **Project settings**
+2. Select **Access**
+3. Click **Add people**
+4. Enter team members' email addresses (the ones they used for Atlassian)
+5. Set their role to **Member**
 
 - [ ] **Connect Claude Code to your new Jira project**
   - Each team member must connect the Atlassian MCP to the new project
