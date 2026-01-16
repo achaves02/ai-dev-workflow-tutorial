@@ -109,13 +109,16 @@ When working as a team, the workflow expands slightly:
 │                 ↓                                           │
 │  5. Push and create Pull Request                            │
 │                 ↓                                           │
-│  6. Request review from teammate                            │
+│  6. Update Jira with evidence                               │
+│     (commit hash, branch, GitHub link)                      │
 │                 ↓                                           │
-│  7. Address feedback                                        │
+│  7. Request review from teammate                            │
 │                 ↓                                           │
-│  8. Merge when approved                                     │
+│  8. Address feedback, push updates                          │
 │                 ↓                                           │
-│  9. Move Jira issue to Done                                 │
+│  9. Merge when approved                                     │
+│                 ↓                                           │
+│ 10. Move Jira issue to Done                                 │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -188,7 +191,27 @@ Claude Code is most helpful when you:
 
 ### Starting a New Feature
 
-In the terminal:
+With Claude Code, you can use natural language instead of memorizing git commands:
+
+```
+# In Claude Code:
+
+Pull latest main and create a feature branch for PROJ-123 user dashboard
+
+# Work with Claude to implement...
+
+Commit my changes for PROJ-123 and push to GitHub
+
+# Then update Jira with evidence
+Update PROJ-123 in Jira with a comment summarizing what was implemented,
+the commit hash, branch name, and GitHub link
+```
+
+> **Tip:** Claude Code handles the git commands for you. Just describe what you want in plain English.
+
+<details>
+<summary>Traditional git commands (for reference)</summary>
+
 ```bash
 # 1. Make sure main is up to date
 git checkout main
@@ -197,23 +220,30 @@ git pull origin main
 # 2. Create feature branch
 git checkout -b feature/PROJ-123-add-user-dashboard
 
-# 3. Start Claude Code
-claude
+# 3. Start Claude Code and implement...
 
-# 4. Work with Claude to implement
-# ...
-
-# 5. Commit and push
+# 4. Commit and push
 git add .
 git commit -m "PROJ-123: add user dashboard with recent activity"
 git push -u origin feature/PROJ-123-add-user-dashboard
 
-# 6. Create PR on GitHub
+# 5. Create PR on GitHub
 ```
+
+</details>
 
 ### Handling Merge Conflicts
 
-When you see "This branch has conflicts", run these in the terminal:
+When you see "This branch has conflicts", ask Claude Code for help:
+
+```
+Help me resolve the merge conflicts with main
+```
+
+Claude Code will fetch the latest changes, identify conflicts, and guide you through resolving them.
+
+<details>
+<summary>Traditional git commands (for reference)</summary>
 
 ```bash
 # 1. Get latest main
@@ -230,6 +260,8 @@ git add .
 git commit -m "PROJ-123: resolve merge conflicts"
 git push
 ```
+
+</details>
 
 ### Debugging with Claude Code
 
@@ -293,9 +325,37 @@ Claude can read your code and provide specific solutions.
 
 ## Quick Reference Card
 
+**With Claude Code (recommended):**
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Quick Reference                           │
+│              Quick Reference - Claude Code                   │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Start new work:                                            │
+│  "Pull latest main and create branch for PROJ-123"          │
+│                                                             │
+│  Save work:                                                 │
+│  "Commit my changes for PROJ-123 and push to GitHub"        │
+│                                                             │
+│  Update Jira:                                               │
+│  "Update PROJ-123 with commit hash, branch, and GitHub      │
+│   link. Mark it Done."                                      │
+│                                                             │
+│  Update from main:                                          │
+│  "Pull latest changes from main into my branch"             │
+│                                                             │
+│  Check status:                                              │
+│  "What's the git status?"                                   │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+<details>
+<summary>Traditional git commands (for reference)</summary>
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              Quick Reference - Git Commands                  │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  Start new work:                                            │
@@ -312,10 +372,9 @@ Claude can read your code and provide specific solutions.
 │  Check status:                                              │
 │  git status && git log --oneline -5                         │
 │                                                             │
-│  Get help:                                                  │
-│  claude  (then describe your problem)                       │
-│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+</details>
 
 Good luck with your capstone! You have the skills and tools to succeed.

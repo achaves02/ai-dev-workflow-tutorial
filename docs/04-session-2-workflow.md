@@ -751,6 +751,25 @@ This is the workflow you will use for your capstone project.
 
 ---
 
+## What to Submit
+
+Submit the following to Brightspace under the **\_\_\_\_\_\_** assignment:
+
+1. **GitHub repository link** - Your public repo URL (e.g., `https://github.com/yourusername/ai-dev-workflow-tutorial`)
+
+2. **Streamlit dashboard link** - Your live deployed dashboard URL (e.g., `https://sales-dashboard-yourname.streamlit.app`)
+
+3. **Jira issue screenshot(s)** - Screenshot of one completed Jira issue showing:
+   - Issue status is "Done"
+   - Comment with implementation summary, commit hash, branch name, and GitHub link
+
+   If the entire issue doesn't fit in one screenshot, submit multiple screenshots. Name them:
+   - `jira-01.png`
+   - `jira-02.png`
+   - etc.
+
+---
+
 ## What's Next
 
 Continue to [Next Steps](06-next-steps.md) to learn how to apply this workflow to your capstone project.
