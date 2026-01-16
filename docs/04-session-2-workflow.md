@@ -302,10 +302,10 @@ The plan outlines how you will build the specification technically.
    - Data flow
 
 3. Preview the generated plan:
-   - In Cursor's file explorer, navigate to `specs/001-sales-dashboard/`
+   - In Cursor's file explorer, navigate to `specs/` and open your feature folder (e.g., `001-sales-dashboard/`)
    - Right-click `plan.md` and select **Open Preview**
 
-**Checkpoint:** An implementation plan exists at `specs/001-sales-dashboard/plan.md` with clear technical direction.
+**Checkpoint:** An implementation plan exists at `specs/[feature-name]/plan.md` with clear technical direction.
 
 ---
 
