@@ -214,12 +214,24 @@ The constitution establishes principles and guidelines for your project. It ensu
 
 The specification refines the PRD (Product Requirements Document — the document in `prd/ecommerce-analytics.md` that describes what we want to build) into detailed, actionable requirements.
 
+> **About the `@` Symbol**
+>
+> When you type `@` followed by a file path in Claude Code, it includes that file's content in your message. This is called a "file reference."
+>
+> Benefits of using `@`:
+> - Claude sees the **actual file content**, not just a file name
+> - No need to copy/paste — the entire file is included automatically
+> - Works with any file type: code, markdown, CSV, etc.
+> - You can reference multiple files: `@file1.py @file2.py`
+
 **Steps:**
 
 1. In Claude Code, run:
    ```
    /speckit.specify @prd/ecommerce-analytics.md
    ```
+
+   This tells Claude to read the PRD file and use spec-kit to create a detailed specification from it.
 
 2. Claude will analyze the PRD and create a specification
 3. Review the specification for clarity and completeness
