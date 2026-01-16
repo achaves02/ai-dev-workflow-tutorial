@@ -429,6 +429,8 @@ Now use Claude Code to build the dashboard. This step will create multiple files
 2. Implement the first task:
    ```
    /speckit.implement
+
+   Implement ECOM-1 and move it to In Progress in Jira.
    ```
 
 3. Claude will automatically use your tasks file to:
