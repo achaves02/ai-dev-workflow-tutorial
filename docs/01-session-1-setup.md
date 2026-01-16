@@ -472,7 +472,9 @@ Now that you have the repository open in Cursor, let's initialize Claude Code so
 **Steps:**
 
 1. Close Cursor's AI panels to free up space for the terminal:
-   - Go to **View** → **Appearance** → **Secondary Side Bar** to hide the right panel
+   - Look at the **top right** of the Cursor window — you'll see icons to toggle the primary sidebar, panel, and agents sidebar
+   - Click the agents sidebar icon (rightmost) to hide it
+   - Or go to **View** → **Appearance** → **Secondary Side Bar**
    - This gives you more room to see Claude Code's output
 
 2. Open the terminal in Cursor (Terminal → New Terminal)
