@@ -437,7 +437,10 @@ Now use Claude Code to build the dashboard. This step will create multiple files
 
 3. Claude will use the Jira issue description to understand and complete the work.
 
-4. Review the generated code. Make sure you understand what it does.
+4. Review the generated code. You can ask Claude to explain the main files:
+   ```
+   What are the main code files you created? Help me understand what each one does.
+   ```
 
 **Test the dashboard:**
 
