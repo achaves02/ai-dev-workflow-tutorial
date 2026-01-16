@@ -454,7 +454,7 @@ Cloning downloads the repository to your computer. Cursor has a built-in feature
 4. Open Cursor
 5. Go to **File** → **New Window**
 6. In the new window, click **Clone Repo**
-7. Paste the repository URL you copied from GitHub and press **Enter**
+7. Paste the repository URL you copied from GitHub and press **Enter/Return**
 8. Choose a location to save the project:
    - **Recommended:** Create a `GitHub` folder in your home directory (e.g., `~/GitHub` on macOS or `C:\Users\YourName\GitHub` on Windows) to keep all your GitHub repositories organized in one place
 9. Click **Clone** and wait for the download to complete
