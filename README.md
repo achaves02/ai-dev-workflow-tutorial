@@ -103,7 +103,7 @@ This tutorial is designed for two 100-minute sessions. **Read documents in the n
 | Document | Description |
 |----------|-------------|
 | [Troubleshooting](docs/05-troubleshooting.md) | Common issues and solutions |
-| [Next Steps](docs/06-next-steps.md) | Applying this workflow to your capstone |
+| [Capstone Project Dev Environment](docs/06-capstone-project-dev-environment.md) | Setting up your capstone project |
 | [FAQ](docs/07-faq.md) | Frequently asked questions |
 | [Glossary](docs/08-glossary.md) | Key terms and definitions |
 

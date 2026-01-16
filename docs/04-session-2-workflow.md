@@ -769,4 +769,4 @@ Submit the following to Brightspace under the **AI Dev Workflow Tutorial** assig
 
 ## What's Next
 
-Continue to [Next Steps](06-next-steps.md) to learn how to apply this workflow to your capstone project.
+Continue to [Capstone Project Dev Environment](06-capstone-project-dev-environment.md) to set up your capstone project.

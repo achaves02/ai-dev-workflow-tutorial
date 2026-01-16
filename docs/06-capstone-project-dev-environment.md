@@ -1,6 +1,8 @@
-# Next Steps: Applying to Your Capstone
+# Capstone Project Development Environment
 
 You have completed the tutorial and learned the full AI-assisted development workflow. Now it's time to apply these skills to your actual capstone project.
+
+This guide walks you through setting up your capstone project using the same workflow you learned in the tutorial.
 
 ## What You Have Learned
 
@@ -60,6 +62,11 @@ Use this checklist when setting up your actual capstone project. Each team membe
   - Create columns: To Do, In Progress, In Review, Done
   - Decide on sprint length if using Scrum
 
+- [ ] **Connect Claude Code to your new Jira project**
+  - Each team member must connect the Atlassian MCP to the new project
+  - In Claude Code, run `/mcp`, select **atlassian**, and authenticate
+  - This is the same process from the tutorial, but now for your capstone Jira project
+
 ### Development Environment
 
 - [ ] **Each team member** should have:
@@ -81,10 +88,105 @@ Use this checklist when setting up your actual capstone project. Each team membe
   specify init . --ai claude
   ```
 
-- [ ] **Create your constitution**
-  - Define project principles
-  - Agree on coding standards
-  - Document technology choices
+---
+
+## Write Your PRD
+
+In the tutorial, you used a provided PRD. For your capstone, you'll write your own.
+
+### What a PRD Should Include
+
+1. **Problem Statement** — What problem are you solving? Why does it matter?
+2. **Target Users** — Who will use this? What are their needs?
+3. **Features** — What will the solution do? (Be specific)
+4. **Acceptance Criteria** — How do you know each feature is "done"?
+5. **Constraints** — Technology requirements, timeline, team size
+
+### Creating Your PRD
+
+You can use Claude Code to help draft your PRD:
+
+```
+Help me write a PRD for [describe your project idea].
+
+Include:
+- Problem statement
+- Target users
+- Key features with acceptance criteria
+- Technical constraints
+```
+
+Save your PRD in a `prd/` folder in your repo, just like the tutorial:
+
+```
+your-capstone-repo/
+├── prd/
+│   └── your-project-name.md    ← Your PRD goes here
+├── specs/                       ← spec-kit will create this
+└── ...
+```
+
+---
+
+## Spec-Kit Workflow for Capstone
+
+Follow the same spec-kit workflow you learned in the tutorial:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                 Spec-Kit Workflow                            │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  1. Constitution    → Project principles and standards      │
+│         ↓                                                   │
+│  2. Specification   → What to build (from your PRD)         │
+│         ↓                                                   │
+│  3. Plan            → How to build it (technical approach)  │
+│         ↓                                                   │
+│  4. Tasks           → Atomic work items                     │
+│         ↓                                                   │
+│  5. Jira Issues     → Create issues from tasks              │
+│         ↓                                                   │
+│  6. Implement       → Build with /speckit.implement         │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Step-by-Step
+
+1. **Create constitution** — Define your project's coding standards and principles:
+   ```
+   /speckit.constitution
+   ```
+
+2. **Create specification** — Convert your PRD into a technical specification:
+   ```
+   /speckit.specify @prd/your-project-name.md
+   ```
+
+3. **Create plan** — Generate an implementation plan:
+   ```
+   /speckit.plan
+   ```
+
+4. **Generate tasks** — Break the plan into atomic tasks:
+   ```
+   /speckit.tasks
+   ```
+
+5. **Create Jira issues** — Use Claude Code to create issues from your tasks:
+   ```
+   Create Jira issues from @specs/[your-spec]/tasks.md
+   ```
+
+6. **Implement** — Work through issues one at a time:
+   ```
+   /speckit.implement
+
+   Implement [ISSUE-KEY] and move it to In Progress in Jira.
+   ```
+
+> **Remember:** After completing each issue, commit, push, and update Jira with evidence (implementation summary, commit hash, branch, GitHub link).
 
 ---
 
@@ -303,6 +405,24 @@ Claude can read your code and provide specific solutions.
 - **Team members** — Pair programming, code reviews
 - **Instructor** — Office hours for complex problems
 - **Online resources** — Stack Overflow, documentation
+
+### Deployment Options
+
+The tutorial used Streamlit Community Cloud, but your capstone may use different technology:
+
+| Technology | Deployment Options |
+|------------|-------------------|
+| **Streamlit** | Streamlit Community Cloud (free) |
+| **Flask/Django** | Heroku, Railway, Render, AWS |
+| **React/Vue** | Vercel, Netlify, GitHub Pages |
+| **API only** | Heroku, Railway, AWS Lambda |
+
+Ask Claude Code for help with deployment:
+```
+Help me deploy my [Flask/React/etc.] app. What are my options?
+```
+
+> **Key principle:** Merge your feature branch to `main` before deploying. Most deployment platforms deploy from the `main` branch.
 
 ---
 
