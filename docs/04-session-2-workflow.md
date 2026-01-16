@@ -563,6 +563,8 @@ Now repeat the cycle for each remaining Jira issue:
 
 > **🔁 Repeat steps 1-5 for each remaining Jira issue until all are complete.**
 
+> **Tip:** Watch Claude Code's output as it works. You'll see what files it creates, what commands it runs, and how it solves problems. This is a great way to learn!
+
 You can also ask Claude to fix or improve things:
 
 ```
