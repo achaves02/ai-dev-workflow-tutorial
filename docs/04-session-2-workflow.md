@@ -251,11 +251,18 @@ The specification refines the PRD (Product Requirements Document — the documen
    This tells Claude to read the PRD file and use spec-kit to create a detailed specification from it.
 
 2. Claude will analyze the PRD and create a specification
-3. Review the specification for clarity and completeness
+
+3. Preview the generated specification:
+   - In Cursor's file explorer, navigate to `specs/` and find the folder for your feature (e.g., `001-sales-dashboard/`)
+   - Right-click `spec.md` and select **Open Preview** to view the formatted specification
+
+4. If a `checklists/` folder was created inside your feature folder, also preview `requirements.md` to see the detailed requirements checklist
 
 > **Note:** Spec-kit automatically created a feature branch for this work (you may see something like `001-sales-dashboard` in your terminal prompt). This keeps your changes separate from the main branch until you're ready to merge. We'll merge back to main after implementation.
 
-**Checkpoint:** A specification document is created with clear, detailed requirements.
+**Checkpoint:**
+- A specification exists at `specs/[feature-name]/spec.md`
+- (Optional) A requirements checklist exists at `specs/[feature-name]/checklists/requirements.md`
 
 ---
 
