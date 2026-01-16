@@ -414,7 +414,19 @@ If you don't see `(venv)`, run the activation command again (see Manual steps ab
 
 ### 4.2 Build the Dashboard
 
-Now use Claude Code to build the dashboard.
+Now use Claude Code to build the dashboard. This step will create multiple files, so you'll see many edit permission prompts.
+
+> **Claude Code Modes**
+>
+> Claude Code has different modes that control how it handles edits. Press **Shift+Tab** to cycle through them:
+>
+> | Mode | Behavior | When to Use |
+> |------|----------|-------------|
+> | **Normal** | Asks permission for each edit | Learning, reviewing changes carefully |
+> | **Auto-accept** | Makes edits without asking | Trusting Claude, doing many edits |
+> | **Plan mode** | Explains what it will do, waits for approval | Complex changes, want to review before executing |
+>
+> For this implementation phase, consider switching to **Auto-accept** mode to speed things up. You can always press **Shift+Tab** to change modes at any time.
 
 **Steps:**
 
