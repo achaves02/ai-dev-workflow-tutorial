@@ -8,11 +8,15 @@ A reference guide to key terms used in this tutorial.
 
 | Term | Definition |
 |------|------------|
+| **Branch** | A separate copy of your code where you can make changes without affecting the main version. |
 | **Clone** | Creating a local copy of a remote repository on your computer. |
 | **Commit** | A snapshot of your project at a specific moment, like a "save point." |
+| **Commit Hash** | A unique ID for each commit (like `abc1234`), used to reference specific snapshots of code. |
+| **Feature Branch** | A branch created for developing a specific feature, separate from main (e.g., `001-sales-dashboard`). |
 | **Fork** | Your personal copy of someone else's repository on GitHub. |
 | **Git** | Version control software that tracks changes to files over time. |
 | **GitHub** | A website that hosts Git repositories in the cloud and enables collaboration. |
+| **Merge** | Combining changes from one branch into another (e.g., feature branch into main). |
 | **Pull** | Downloading changes from a remote repository to your local copy. |
 | **Push** | Uploading your local commits to a remote repository. |
 | **Repository (Repo)** | A project folder tracked by Git, containing files and complete history. |
@@ -106,7 +110,7 @@ A reference guide to key terms used in this tutorial.
 - Claude Code, Cursor, Git, GitHub, Jira, CLI, Terminal, Fork, Clone, MCP
 
 ### Session 2: Workflow
-- Commit, Push, spec-kit, PRD, KPI, Streamlit, Virtual Environment, Deployment, Streamlit Community Cloud
+- Branch, Feature Branch, Merge, Commit, Commit Hash, Push, spec-kit, PRD, KPI, Streamlit, Virtual Environment, Deployment, Streamlit Community Cloud
 
 ### Troubleshooting
 - Path, .gitignore, pip, Virtual Environment, Staging Area

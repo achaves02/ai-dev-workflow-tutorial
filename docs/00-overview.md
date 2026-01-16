@@ -236,9 +236,11 @@ Use this checklist to verify your tutorial is complete:
 - [ ] spec-kit specification created
 - [ ] spec-kit plan created
 - [ ] spec-kit tasks generated
-- [ ] Jira issue created (ECOM-1)
+- [ ] Jira issues created from tasks (ECOM-1, ECOM-2, etc.)
 - [ ] Streamlit dashboard built
-- [ ] Changes committed with Jira key
+- [ ] Changes committed with Jira keys
+- [ ] Jira issues updated with evidence (commit hash, branch, GitHub link)
+- [ ] Feature branch merged to main
 - [ ] Code pushed to GitHub
 - [ ] Dashboard deployed to Streamlit Community Cloud
 

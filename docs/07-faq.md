@@ -55,11 +55,11 @@ You use Git to manage your code locally, and GitHub to share it with others.
 ### How often should I commit?
 
 Commit when you complete a logical unit of work. This might be:
-- After implementing a single function
+- After implementing a Jira issue
+- After completing a feature
 - After fixing a bug
-- After making a UI component work
 
-A good rule: if you can describe it in one sentence, it's a good commit size.
+A good rule: if you can describe it in one sentence, it's a good commit size. Don't wait until everything is done — commit at meaningful moments so you never lose much progress.
 
 ### What makes a good commit message?
 
@@ -236,7 +236,7 @@ python --version  # or python3 --version
 
 ### Do I need to learn terminal commands?
 
-You need basic commands (cd, ls, git). See the [Terminal Basics](02-terminal-basics.md) guide. Claude Code can help you with most terminal operations.
+Basic familiarity helps, but Claude Code lets you use natural language instead of memorizing commands. For example, instead of typing `git commit -m "message"`, you can tell Claude: "Commit my changes for ECOM-1." See the [Terminal Basics](02-terminal-basics.md) guide for reference.
 
 ### What if I'm more comfortable with VS Code than Cursor?
 
