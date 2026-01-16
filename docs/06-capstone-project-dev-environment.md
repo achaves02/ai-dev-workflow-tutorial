@@ -4,7 +4,24 @@ You have completed the tutorial and learned the full AI-assisted development wor
 
 This guide walks you through setting up your capstone project using the same workflow you learned in the tutorial.
 
-## What You Have Learned
+---
+
+## Table of Contents
+
+1. [What You Have Learned](#1-what-you-have-learned)
+2. [Capstone Project Setup Checklist](#2-capstone-project-setup-checklist)
+3. [Write Your PRD](#3-write-your-prd)
+4. [Spec-Kit Workflow for Capstone](#4-spec-kit-workflow-for-capstone)
+5. [Team Workflow](#5-team-workflow)
+6. [Best Practices for Capstone Success](#6-best-practices-for-capstone-success)
+7. [Common Capstone Patterns](#7-common-capstone-patterns)
+8. [Capstone Resources](#8-capstone-resources)
+9. [Final Reminders](#9-final-reminders)
+10. [Quick Reference Card](#10-quick-reference-card)
+
+---
+
+## 1. What You Have Learned
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -29,7 +46,7 @@ This guide walks you through setting up your capstone project using the same wor
 
 ---
 
-## Capstone Project Setup Checklist
+## 2. Capstone Project Setup Checklist
 
 Use this checklist when setting up your actual capstone project. Each team member should complete these steps.
 
@@ -110,9 +127,50 @@ One team member creates the Jira project, then invites the rest of the team.
 
 ---
 
-## Write Your PRD
+## 3. Write Your PRD
 
-In the tutorial, you used a provided PRD. For your capstone, you'll write your own.
+In the tutorial, you used a provided PRD. For your capstone, you'll revise the PRD you submitted last semester.
+
+### Organize Your Notes
+
+To help you update your PRD, create a `notes/` directory in your repo to collect:
+
+- Meeting notes with your team or sponsor
+- Your own thoughts and ideas
+- Meeting transcripts or AI-generated meeting summaries
+- Feedback from stakeholders
+
+```
+your-capstone-repo/
+├── notes/
+│   ├── sponsor-meeting-01.md
+│   ├── team-brainstorm.md
+│   └── feedback-summary.md
+├── prd/
+│   └── your-project-name.md    ← Your PRD goes here
+├── specs/                       ← spec-kit will create this
+└── ...
+```
+
+### Creating Your PRD with Claude Code
+
+Use Claude Code and reference your notes using the `@` symbol:
+
+```
+Help me write a PRD based on @notes/sponsor-meeting-01.md and @notes/team-brainstorm.md
+
+Include:
+- Problem statement
+- Target users
+- Key features with acceptance criteria
+- Technical constraints
+```
+
+You can also reference the entire notes directory:
+
+```
+Review @notes/ and help me update my PRD with the key requirements discussed.
+```
 
 ### What a PRD Should Include
 
@@ -122,33 +180,9 @@ In the tutorial, you used a provided PRD. For your capstone, you'll write your o
 4. **Acceptance Criteria** — How do you know each feature is "done"?
 5. **Constraints** — Technology requirements, timeline, team size
 
-### Creating Your PRD
-
-You can use Claude Code to help draft your PRD:
-
-```
-Help me write a PRD for [describe your project idea].
-
-Include:
-- Problem statement
-- Target users
-- Key features with acceptance criteria
-- Technical constraints
-```
-
-Save your PRD in a `prd/` folder in your repo, just like the tutorial:
-
-```
-your-capstone-repo/
-├── prd/
-│   └── your-project-name.md    ← Your PRD goes here
-├── specs/                       ← spec-kit will create this
-└── ...
-```
-
 ---
 
-## Spec-Kit Workflow for Capstone
+## 4. Spec-Kit Workflow for Capstone
 
 Follow the same spec-kit workflow you learned in the tutorial:
 
@@ -210,7 +244,7 @@ Follow the same spec-kit workflow you learned in the tutorial:
 
 ---
 
-## Team Workflow
+## 5. Team Workflow
 
 When working as a team, the workflow expands slightly:
 
@@ -264,7 +298,7 @@ When your code is reviewed:
 
 ---
 
-## Best Practices for Capstone Success
+## 6. Best Practices for Capstone Success
 
 ### Use Branches Consistently
 
@@ -310,7 +344,7 @@ Claude Code is most helpful when you:
 
 ---
 
-## Common Capstone Patterns
+## 7. Common Capstone Patterns
 
 ### Starting a New Feature
 
@@ -402,7 +436,7 @@ Claude can read your code and provide specific solutions.
 
 ---
 
-## Capstone Resources
+## 8. Capstone Resources
 
 ### Documentation to Create
 
@@ -446,7 +480,7 @@ Help me deploy my [Flask/React/etc.] app. What are my options?
 
 ---
 
-## Final Reminders
+## 9. Final Reminders
 
 1. **Start with the PRD** — Know what you are building before coding
 
@@ -464,7 +498,7 @@ Help me deploy my [Flask/React/etc.] app. What are my options?
 
 ---
 
-## Quick Reference Card
+## 10. Quick Reference Card
 
 **With Claude Code (recommended):**
 ```
