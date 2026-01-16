@@ -253,6 +253,8 @@ The specification refines the PRD (Product Requirements Document — the documen
 2. Claude will analyze the PRD and create a specification
 3. Review the specification for clarity and completeness
 
+> **Note:** Spec-kit automatically created a feature branch for this work (you may see something like `001-sales-dashboard` in your terminal prompt). This keeps your changes separate from the main branch until you're ready to merge. We'll merge back to main after implementation.
+
 **Checkpoint:** A specification document is created with clear, detailed requirements.
 
 ---
@@ -492,6 +494,35 @@ Can you add a title to the dashboard and format the Total Sales KPI as currency?
 Claude Code can read your existing code and make modifications.
 
 **Checkpoint:** The dashboard looks professional and displays data correctly.
+
+---
+
+### 4.4 Merge Your Work to Main
+
+Spec-kit created a feature branch for your work. Now that implementation is complete, merge your changes back to the main branch.
+
+**Steps:**
+
+1. In the terminal (not Claude Code), check which branch you're on:
+   ```bash
+   git branch
+   ```
+   You should see an asterisk (*) next to a branch name like `001-sales-dashboard`.
+
+2. Ask Claude Code to merge your work into main:
+   ```
+   Merge my current feature branch into main
+   ```
+
+   Claude will switch to the main branch and merge your changes.
+
+3. Verify you're now on main:
+   ```bash
+   git branch
+   ```
+   The asterisk (*) should now be next to `main`.
+
+**Checkpoint:** You are on the `main` branch with all your dashboard changes included.
 
 ---
 
