@@ -36,3 +36,20 @@ if df.empty:
 
 # Dashboard title
 st.title("ShopSmart Sales Dashboard")
+
+# --- User Story 1: Key Performance Indicators ---
+
+# Calculate KPI metrics
+total_sales = df["total_amount"].sum()
+total_orders = df["order_id"].nunique()
+
+# Create two-column layout for KPI metrics
+col1, col2 = st.columns(2)
+
+# Display Total Sales with currency formatting
+with col1:
+    st.metric(label="Total Sales", value=f"${total_sales:,.0f}")
+
+# Display Total Orders with number formatting
+with col2:
+    st.metric(label="Total Orders", value=f"{total_orders:,}")

@@ -58,11 +58,11 @@ This project uses a single-file structure per the constitution:
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Calculate total_sales as sum of total_amount column in app.py
-- [ ] T010 [US1] Calculate total_orders as count of unique order_id values in app.py
-- [ ] T011 [US1] Create two-column layout for KPI metrics using st.columns() in app.py
-- [ ] T012 [US1] Display Total Sales using st.metric() with currency formatting in app.py
-- [ ] T013 [US1] Display Total Orders using st.metric() with number formatting in app.py
+- [x] T009 [US1] Calculate total_sales as sum of total_amount column in app.py
+- [x] T010 [US1] Calculate total_orders as count of unique order_id values in app.py
+- [x] T011 [US1] Create two-column layout for KPI metrics using st.columns() in app.py
+- [x] T012 [US1] Display Total Sales using st.metric() with currency formatting in app.py
+- [x] T013 [US1] Display Total Orders using st.metric() with number formatting in app.py
 
 **Checkpoint**: User Story 1 complete - KPIs visible at top, values match CSV calculations
 
