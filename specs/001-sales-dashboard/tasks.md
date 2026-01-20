@@ -94,11 +94,11 @@ This project uses a single-file structure per the constitution:
 
 ### Implementation for User Story 3
 
-- [ ] T019 [US3] Create category sales aggregation using groupby('category') in app.py
-- [ ] T020 [US3] Sort category data by total_amount descending in app.py
-- [ ] T021 [US3] Create bar chart using plotly.express.bar() in app.py
-- [ ] T022 [US3] Configure chart title "Sales by Category" and axis labels in app.py
-- [ ] T023 [US3] Add interactive tooltips showing category and sales amount in app.py
+- [x] T019 [US3] Create category sales aggregation using groupby('category') in app.py
+- [x] T020 [US3] Sort category data by total_amount descending in app.py
+- [x] T021 [US3] Create bar chart using plotly.express.bar() in app.py
+- [x] T022 [US3] Configure chart title "Sales by Category" and axis labels in app.py
+- [x] T023 [US3] Add interactive tooltips showing category and sales amount in app.py
 
 **Checkpoint**: User Story 3 complete - category chart shows 5 categories sorted by value
 

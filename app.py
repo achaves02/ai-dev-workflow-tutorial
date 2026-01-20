@@ -77,3 +77,26 @@ fig_trend.update_traces(
 
 # Display chart with full width
 st.plotly_chart(fig_trend, use_container_width=True)
+
+# --- User Story 3: Sales by Category ---
+
+# Create category sales aggregation and sort descending
+category_sales = df.groupby("category")["total_amount"].sum().reset_index()
+category_sales = category_sales.sort_values("total_amount", ascending=False)
+
+# Create bar chart
+fig_category = px.bar(
+    category_sales,
+    x="category",
+    y="total_amount",
+    title="Sales by Category",
+    labels={"category": "Category", "total_amount": "Sales ($)"}
+)
+
+# Add interactive tooltips showing category and sales amount
+fig_category.update_traces(
+    hovertemplate="<b>%{x}</b><br>Sales: $%{y:,.0f}<extra></extra>"
+)
+
+# Display category chart
+st.plotly_chart(fig_category, use_container_width=True)
