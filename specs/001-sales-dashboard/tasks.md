@@ -76,11 +76,11 @@ This project uses a single-file structure per the constitution:
 
 ### Implementation for User Story 2
 
-- [ ] T014 [US2] Create monthly sales aggregation using groupby and to_period('M') in app.py
-- [ ] T015 [US2] Create line chart using plotly.express.line() with markers in app.py
-- [ ] T016 [US2] Configure chart title "Sales Trend Over Time" and axis labels in app.py
-- [ ] T017 [US2] Add interactive tooltips showing month and sales amount in app.py
-- [ ] T018 [US2] Display chart using st.plotly_chart() with full width in app.py
+- [x] T014 [US2] Create monthly sales aggregation using groupby and to_period('M') in app.py
+- [x] T015 [US2] Create line chart using plotly.express.line() with markers in app.py
+- [x] T016 [US2] Configure chart title "Sales Trend Over Time" and axis labels in app.py
+- [x] T017 [US2] Add interactive tooltips showing month and sales amount in app.py
+- [x] T018 [US2] Display chart using st.plotly_chart() with full width in app.py
 
 **Checkpoint**: User Story 2 complete - trend chart shows 12 months of data with tooltips
 

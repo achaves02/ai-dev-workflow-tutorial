@@ -53,3 +53,27 @@ with col1:
 # Display Total Orders with number formatting
 with col2:
     st.metric(label="Total Orders", value=f"{total_orders:,}")
+
+# --- User Story 2: Sales Trend Over Time ---
+
+# Create monthly sales aggregation
+monthly_sales = df.groupby(df["date"].dt.to_period("M"))["total_amount"].sum().reset_index()
+monthly_sales["date"] = monthly_sales["date"].dt.to_timestamp()
+
+# Create line chart with markers
+fig_trend = px.line(
+    monthly_sales,
+    x="date",
+    y="total_amount",
+    markers=True,
+    title="Sales Trend Over Time",
+    labels={"date": "Month", "total_amount": "Sales ($)"}
+)
+
+# Add interactive tooltips showing month and sales amount
+fig_trend.update_traces(
+    hovertemplate="<b>%{x|%B %Y}</b><br>Sales: $%{y:,.0f}<extra></extra>"
+)
+
+# Display chart with full width
+st.plotly_chart(fig_trend, use_container_width=True)
