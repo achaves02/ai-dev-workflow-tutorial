@@ -100,3 +100,26 @@ fig_category.update_traces(
 
 # Display category chart
 st.plotly_chart(fig_category, use_container_width=True)
+
+# --- User Story 4: Sales by Region ---
+
+# Create region sales aggregation and sort descending
+region_sales = df.groupby("region")["total_amount"].sum().reset_index()
+region_sales = region_sales.sort_values("total_amount", ascending=False)
+
+# Create bar chart
+fig_region = px.bar(
+    region_sales,
+    x="region",
+    y="total_amount",
+    title="Sales by Region",
+    labels={"region": "Region", "total_amount": "Sales ($)"}
+)
+
+# Add interactive tooltips showing region and sales amount
+fig_region.update_traces(
+    hovertemplate="<b>%{x}</b><br>Sales: $%{y:,.0f}<extra></extra>"
+)
+
+# Display region chart
+st.plotly_chart(fig_region, use_container_width=True)
